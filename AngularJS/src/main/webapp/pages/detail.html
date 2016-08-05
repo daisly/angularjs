@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+  <div class="panel-header">
+    <span>详情</span>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <img ng-src="../resources/images/{{animation.img}}" class="img-responsive img-rounded" alt="{{animation.title}}">
+      </div>
+      <div class="col-sm-6">
+        <dl class="dl-horizontal">
+          <dt>名称</dt>
+          <dd>{{animation.title}}</dd>
+          <dt>作者</dt>
+          <dd>{{animation.author}}</dd>
+          <dt>初版日期</dt>
+          <dd>{{animation.pubdate}}</dd>
+          <dt>时长</dt>
+          <dd>{{animation.length}}分钟</dd>
+        </dl>
+        <div class="row">
+          <div class="col-sm-3" ng-repeat="img in animation.related">
+            <img ng-src="../resources/images/{{img}}.jpg" class="img-responsive img-rounded" alt="{{animation.title}}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <a href="javascript: history.back()">返回</a>
+  </div>
+</div>

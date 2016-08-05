@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <select ng-model="sort" class="form-control">
+      <option value="id">名称</option>
+      <option value="pubdate">上映时间</option>
+      <option value="length">片长</option>
+    </select>
+  </div>
+  <div class="col-sm-4">
+    <input ng-model="search" type="text" class="form-control" placeholder="请输入title"/>
+  </div>
+</div>
+<p></p>
+<ul class="list-group">
+  <li class="list-group-item fade" ng-hide="flag==1" ng-repeat="animation in animations.animations | filter:search | orderBy:sort">
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="#/{{animation.id}}">
+          <img class="img-responsive img-thunbnail" ng-src="../resources/images/{{animation.img}}" alt="{{animation.title}}">
+        </a>
+      </div>
+      <div class="col-sm-9">
+        <div class="pull-right">
+          <label class="label {{animation.readed|getLableReadedFilter}}">{{animation.readed|checkReadedFilter}}</label>
+        </div>
+        <blockquote>
+          <h2><a href="#/{{animation.id}}">{{animation.title}}</a></h2>
+          <footer>
+          {{animation.author}}&nbsp;
+                              上映时间：{{animation.pubdate}}&nbsp;
+                              片长：{{animation.length}}分钟                   
+          </footer>
+        </blockquote>
+        <div class="text-right">
+          <a class="btn btn-primary" href="#/{{animation.id}}">详情</a>
+          <a class="btn btn-primary" ng-click="flag=1">隐藏</a>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
