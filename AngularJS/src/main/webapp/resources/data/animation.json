@@ -1,8 +1,0 @@
-{
-    "animations":[
-      {"id":"lm","title":"龙猫","author":"宫崎骏","pubdate":"1988-04-16","length":86,"img":"lm.jpg","readed":"true","related":["tkzc","hedydcb","ylgz"]},
-      {"id":"tkzc","title":"天空之城","author":"宫崎骏","pubdate":"1986-08-02","length":124,"img":"tkzc.jpg","readed":"true","related":["lm","hedydcb","ylgz"]},
-      {"id":"hedydcb","title":"哈尔的移动城堡","author":"宫崎骏","pubdate":"2004-11-20","length":119,"img":"ydcb.jpg","readed":"true","related":["lm","tkzc","ylgz"]},
-      {"id":"ylgz","title":"幽灵公主","author":"宫崎骏","pubdate":"1997-07-12","length":134,"img":"ylgz.jpg","readed":"true","related":["lm","tkzc","hedydcb"]}
-    ]
-}
